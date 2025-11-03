@@ -107,6 +107,9 @@ export default function ListScreen({ navigation }) {
               <Text>Puesto: {item.Job}</Text>
               <Text>Teléfono: {item.Phone}</Text>
             </View>
+            <TouchableOpacity style={styles.editBtn} onPress={() => navigation.navigate('Modify', { id: item.id })}>
+              <Text style={styles.editText}>✏️</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.deleteBtn} onPress={() => handleDelete(item.id)}>
               <Text style={styles.deleteText}>🗑️</Text>
             </TouchableOpacity>
@@ -152,6 +155,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   name: { fontWeight: '700', fontSize: 16, marginBottom: 4 },
+  editBtn: { padding: 8 },
+  editText: { color: '#2563eb', fontSize: 20, marginRight: 4 },
   deleteBtn: { padding: 8 },
   deleteText: { color: '#ef4444', fontSize: 20 },
   addBtn: {
