@@ -115,7 +115,7 @@ export default function ListScreen({ navigation }) {
       />
 
       {/* Botón para crear nuevo empleado */}
-      <TouchableOpacity style={styles.addBtn} onPress={() => navigation.navigate('CreateScreen')}>
+      <TouchableOpacity style={styles.addBtn} onPress={() => navigation.navigate('Add')}>
         <Text style={styles.addText}>➕ Nuevo Empleado</Text>
       </TouchableOpacity>
     </View>
